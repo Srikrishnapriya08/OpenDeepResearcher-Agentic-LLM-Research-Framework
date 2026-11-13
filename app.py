@@ -1,6 +1,5 @@
 import streamlit as st
 import os
-Shreeya-Bhalwatkar
 import json
 from datetime import date
 
