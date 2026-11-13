@@ -60,11 +60,22 @@ import os
 from typing import List, Dict
 from tavily import TavilyClient
 
+# load_dotenv()
+
+# TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
+# if not TAVILY_API_KEY:
+#     raise ValueError("TAVILY_API_KEY not found in .env file.")
+
+# tavily = TavilyClient(api_key=TAVILY_API_KEY)
 load_dotenv()
 
-TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
+TAVILY_API_KEY = st.secrets.get(
+    "TAVILY_API_KEY",
+    os.getenv("TAVILY_API_KEY")
+)
+
 if not TAVILY_API_KEY:
-    raise ValueError("TAVILY_API_KEY not found in .env file.")
+    raise ValueError("TAVILY_API_KEY not found in environment or Streamlit Secrets.")
 
 tavily = TavilyClient(api_key=TAVILY_API_KEY)
 
