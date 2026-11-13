@@ -1,6 +1,31 @@
+# Environment variables
+.env
+
+# Python cache
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
 *.log
+
+# Generated documents
 *.pdf
 *.docx
-.env
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db

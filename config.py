@@ -4,7 +4,7 @@
 LLM_CONFIG = {
     "api_key": "lm-studio",
     "base_url": "http://127.0.0.1:1234/v1",
-    "model": "qwen2.5-7b-instruct",
+    "model": "lmstudio-community/qwen2.5-7b-instruct",
     "temperature": 0.7,
     "max_tokens": 2000
 }
